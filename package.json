@@ -13,6 +13,11 @@
     "node"
   ],
   "author": "c-basso@ya.ru",
+  "homepage": "https://github.com/c-basso/jsonbin-io-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/c-basso/jsonbin-io-api.git"
+  },
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.2.0"
