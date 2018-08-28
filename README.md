@@ -1,4 +1,4 @@
-# NodeJs Api for jsonbin.io
+# NodeJs Api for [jsonbin.io](https://jsonbin.io)
 
 ## Install
 ```shell
@@ -17,9 +17,9 @@ const api = new JsonBinIoApi('your-secret-key');
 
 ```js
 api.createBin({
-	collectionId: 'some-collection-id',
-	data: {sample: 'Hello World'},
-	isPrivate: false
+  collectionId: 'some-collection-id',
+  data: {sample: 'Hello World'},
+  isPrivate: false
 })
 .then(console.log);
 ```
@@ -28,8 +28,8 @@ api.createBin({
 
 ```js
 api.readBin({
-	id: 'some-bin-id',
-	version: 'latest'
+  id: 'some-bin-id',
+  version: 'latest'
 })
 .then(console.log);
 ```
@@ -38,9 +38,9 @@ api.readBin({
 
 ```js
 api.updateBin({
-	id: 'some-bin-id',
+  id: 'some-bin-id',
   data: {sample: 'Hello World again!'},
-	versioning: true
+  versioning: true
 })
 .then(console.log);
 ```
@@ -49,7 +49,7 @@ api.updateBin({
 
 ```js
 api.deleteBin({
-	id: 'some-bin-id'
+  id: 'some-bin-id'
 })
 .then(console.log);
 ```
@@ -58,9 +58,9 @@ api.deleteBin({
 
 ```js
 api.createCollection({
-	data: {
-		name: 'Sample Collection'
-	}
+  data: {
+    name: 'Sample Collection'
+  }
 })
 .then(console.log);
 ```
