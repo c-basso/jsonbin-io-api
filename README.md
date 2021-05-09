@@ -1,4 +1,4 @@
-# NodeJs Api for [jsonbin.io](https://jsonbin.io)
+# NodeJs Api for [jsonbin.io](https://jsonbin.io) v3
 
 ## Install
 ```shell
@@ -8,73 +8,45 @@ npm i jsonbin-io-api --save
 
 ## Using
 
-```js
-const JsonBinIoApi = require('jsonbin-io-api');
+```ts
+import {JsonBinIoApi} from 'jsonbin-io-api';
 const api = new JsonBinIoApi('your-secret-key');
 ```
 
 ## create bin
 
-```js
-api.createBin({
-  collectionId: 'some-collection-id',
-  data: {sample: 'Hello World'},
-  isPrivate: false
+```ts
+api.bins.create({
+  record: {sample: 'Hello World'},
+  binName: 'test'
 })
 .then(console.log);
 ```
 
 ## read bin
 
-```js
-api.readBin({
-  id: 'some-bin-id',
-  version: 'latest'
+```ts
+api.bins.read({
+  binId: 'some-bin-id'
 })
 .then(console.log);
 ```
 
 ## update bin
 
-```js
-api.updateBin({
-  id: 'some-bin-id',
-  data: {sample: 'Hello World again!'},
-  versioning: true
+```ts
+api.bins.update({
+  binId: 'some-bin-id',
+  record: {sample: 'Hello World again!'}
 })
 .then(console.log);
 ```
 
 ## delete bin
 
-```js
-api.deleteBin({
-  id: 'some-bin-id'
+```ts
+api.bins.delete({
+  binId: 'some-bin-id'
 })
 .then(console.log);
 ```
-
-## create collection (`name` is requires field)
-
-```js
-api.createCollection({
-  data: {
-    name: 'Sample Collection'
-  }
-})
-.then(console.log);
-```
-
-## update collection (`name` is requires field)
-
-```js
-api.updateCollection({
-  id: 'some-collection-id',
-  data: {
-    name: 'Sample Collection'
-  }
-})
-.then(console.log);
-```
-
-
