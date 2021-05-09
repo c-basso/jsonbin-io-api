@@ -1,4 +1,4 @@
-# NodeJs Api for [jsonbin.io](https://jsonbin.io) v3
+# Zero dependencies NodeJs Api for [jsonbin.io](https://jsonbin.io) v3
 
 ## Install
 ```shell
