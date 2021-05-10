@@ -1,6 +1,6 @@
 {
   "name": "jsonbin-io-api",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Zero dependencies NodeJs Api for jsonbin.io",
   "main": "dist",
   "types": "dist",
