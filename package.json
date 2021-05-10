@@ -8,9 +8,10 @@
     "dist"
   ],
   "scripts": {
-    "dev": "npm i --no-save @types/node typescript eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin",
+    "dev": "npm i --no-save jest @types/jest ts-jest @types/node typescript eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin",
     "build": "rm -rf dist && npx typescript --project tsconfig.json",
-    "lint": "npx eslint . --ext .ts --fix"
+    "lint": "npx eslint . --ext .ts --fix",
+    "test": "npx jest --passWithNoTests"
   },
   "keywords": [
     "jsonbin.io",

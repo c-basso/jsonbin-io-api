@@ -26,7 +26,7 @@ import {to, isBoolean} from '../../util';
  * https://jsonbin.io/api-reference/bins/get-started
  */
 export class BinsApi extends Api {
-  _route = '/b';
+  private readonly _route = '/b';
 
   /**
    * https://jsonbin.io/api-reference/v3/bins/create

@@ -17,7 +17,7 @@ import {
 import {to} from '../../util';
 
 export class SchemaDocsApi extends Api {
-  _route = '/s';
+  private readonly _route = '/s';
 
   /**
    * https://jsonbin.io/api-reference/v3/schema-docs/create

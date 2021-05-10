@@ -20,7 +20,7 @@ import {to} from '../../util';
  * https://jsonbin.io/api-reference/collections/get-started
  */
 export class CollectionsApi extends Api {
-  _route = '/c';
+  private readonly _route = '/c';
 
   /**
    * https://jsonbin.io/api-reference/v3/collections/create

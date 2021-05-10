@@ -12,7 +12,7 @@ import {
 import {to} from '../../util';
 
 export class LogsApi extends Api {
-  _route = '/l';
+  private readonly _route = '/l';
 
   /**
    * https://jsonbin.io/api-reference/v3/usage-logs/list

@@ -18,6 +18,8 @@ export const httpRequest = ({
     options.headers['Content-Length'] = Buffer.byteLength(data);
   }
 
+  options.headers['User-Agent'] = 'c-basso-jsonbin-io-api/2.0';
+
   return new Promise((resolve, reject) => {
     const req = https.request(options, (res) => {
       if (responseType === 'stream' && res.statusCode === 200) {
