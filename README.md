@@ -50,3 +50,6 @@ api.bins.delete({
 })
 .then(console.log);
 ```
+
+## More examples
+More examples in examples dir
