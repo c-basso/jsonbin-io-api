@@ -54,4 +54,4 @@ export class HttpClientTest extends HttpClient {
       headers
     });
   }
-};
+}

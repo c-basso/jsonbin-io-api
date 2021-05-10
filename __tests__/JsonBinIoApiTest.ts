@@ -10,4 +10,4 @@ export class JsonBinIoApiTest extends JsonBinIoApi {
   _getHttpClient(): HttpClient {
     return new HttpClientTest();
   }
-};
+}
