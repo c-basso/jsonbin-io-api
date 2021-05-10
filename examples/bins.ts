@@ -12,7 +12,7 @@ api.bins.create({
   .then(console.log)
   .catch(console.log);
 
-{
+>>> {
   "record": {
     "test": 1
   },
@@ -32,7 +32,7 @@ api.bins.read({binId: '6097bc32a23274124b00f461'})
   .then(console.log)
   .catch(console.log);
 
-  {
+>>> {
     "record": {
       "test": 1
     },
@@ -42,7 +42,6 @@ api.bins.read({binId: '6097bc32a23274124b00f461'})
       "createdAt": "2021-05-09T10:40:50.721Z"
     }
   }
-
 */
 
 
@@ -54,10 +53,10 @@ api.bins.update({
     test: 2
   }
 })
-  .then((a) => console.log(JSON.stringify(a, null, 2)))
+  .then(console.log)
   .catch(console.log);
 
-  {
+>>> {
     "record": {
       "test": 2
     },
@@ -66,6 +65,4 @@ api.bins.update({
       "private": true
     }
   }
-
-
 */
