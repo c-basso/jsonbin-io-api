@@ -108,4 +108,21 @@ describe('BinsApi', () => {
       }
     });
   });
+
+  it('updateName should be ok', async () => {
+    const result = await api.bins.updateName({
+      binId: '<binId>',
+      binName: 'TestName'
+    });
+
+    expect(result).toEqual({
+      data: {},
+      route: '/b/<binId>/meta/name',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': 'test-api-key',
+        'X-Bin-Name': 'TestName'
+      }
+    });
+  });
 });

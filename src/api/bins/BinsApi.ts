@@ -1,4 +1,4 @@
-import {Api} from '../Api';
+import { Api } from '../Api';
 
 import {
   ReadBinRequest,
@@ -7,7 +7,8 @@ import {
   UpdateBinRequest,
   UpdateBinPrivacyRequest,
   BinVersionsCountRequest,
-  DeleteBinVersionsRequest
+  DeleteBinVersionsRequest,
+  UpdateBinNameRequest
 } from './request';
 
 import {
@@ -15,12 +16,13 @@ import {
   UpdateBinResponse,
   DeleteBinResponse,
   CreateBinResponse,
-  BinVersionsCountResponse
+  BinVersionsCountResponse,
+  UpdateBinNameResponse
 } from './response';
 
-import {JSONObject} from '../../types';
+import { JSONObject } from '../../types';
 
-import {to, isBoolean} from '../../util';
+import { to, isBoolean } from '../../util';
 
 /**
  * https://jsonbin.io/api-reference/bins/get-started
@@ -118,6 +120,32 @@ export class BinsApi extends Api {
     }
 
     return result as unknown as UpdateBinResponse<RecordType>;
+  }
+
+  /**
+   * https://jsonbin.io/api-reference/bins/meta/name/update
+   */
+  async updateName(request: UpdateBinNameRequest): Promise<UpdateBinNameResponse> {
+    const headers = this._withMasterKey({
+      'Content-Type': 'application/json',
+      'X-Bin-Name': request.binName
+    })
+
+    const route = `${this._route}/${request.binId}/meta/name`;
+
+    const [error, result] = await to(
+      this._httpClient.put(
+        route,
+        {},
+        headers
+      )
+    );
+
+    if (error) {
+      throw error;
+    }
+
+    return result as UpdateBinNameResponse;
   }
 
   /**
